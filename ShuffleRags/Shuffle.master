@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Shuffle.master.cs" Inherits="Shuffle" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title>Home - Galaxy Mobi</title>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0" /> 
+  <link rel="stylesheet" media="all" href="style.css" type="text/css">
+    <style type="text/css">
+        .auto-style1 {
+            width: 216px;
+            height: 158px;
+        }
+    </style>
+    </head>
+
+<body>
+  <div class="wrap">
+    <header>
+        <div class="options">
+      	    <p>
+               <h2> Made By James Williams</h2></p>
+      </div>
+	    <div class="search-box">
+	    		&nbsp;<img alt="" class="auto-style1" src="images/Drawing.png" />
+	    	<div class="clear"></div>
+	    </div>
+	    <nav class="vertical menu">
+	    	<ul>
+	            <li><a href="index.html">Home</a></li>
+	            <li>Login</li>
+	            <li>Shuffle</li>
+	            <li><a href="contact.html">Contact</a></li>
+        	</ul>
+	    </nav>
+    </header>
+    
+        
+    <footer>
+    	<p>
+            <img alt="" class="auto-style1" src="images/Drawing.png" /></p>
+    </footer>
+  </div>
+ 
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+   window.addEventListener("load",function() {
+	  // Set a timeout...
+	  setTimeout(function(){
+	    // Hide the address bar!
+	    window.scrollTo(0, 1);
+	  }, 0);
+	});
+   $('.search-box,.menu' ).hide();   
+   $('.options li:first-child').click(function(){	
+   		$(this).toggleClass('active'); 	
+   		$('.search-box').toggle();        			
+   		$('.menu').hide();  		
+   		$('.options li:last-child').removeClass('active'); 
+   });
+   $('.options li:last-child').click(function(){
+   		$(this).toggleClass('active');      			
+   		$('.menu').toggle();  		
+   		$('.search-box').hide(); 
+   		$('.options li:first-child').removeClass('active'); 		
+   });
+   $('.content').click(function(){
+   		$('.search-box,.menu' ).hide();   
+   		$('.options li:last-child, .options li:first-child').removeClass('active');
+   });
+</script>
+    <p>
+        &nbsp;</p>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        <p>
+        </p>
+    </asp:ContentPlaceHolder>
+    <p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h2>MADE BY JAMES WILLIAMS</h2></p>
+    </body>
+</html>
