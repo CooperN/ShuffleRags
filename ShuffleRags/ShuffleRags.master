@@ -23,8 +23,7 @@
             This is the header
         </div>
         <div data-role="content" data-theme="a">
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
         </div>
 
         <div data-role="footer" data-theme="a" data-id="myfooter" data-position="fixed" data-fullscreen="true">
