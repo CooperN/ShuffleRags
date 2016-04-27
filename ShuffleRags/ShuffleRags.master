@@ -24,7 +24,7 @@
               </script>
 			<p> Is This A Header?</p>
 		</div>
-		<div data-role="content" data-themxe="a">
+		<div data-role="content" data-theme="a">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
 		</div>
 	</div>
