@@ -4,29 +4,54 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>jQuery Mobile: Theme Download</title>
-	<link rel="stylesheet" href="themes/ShuffleRags(A).min.css" />
-	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link href="css/Layout.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ShuffleRags</title>
+    <link rel="stylesheet" href="themes/ShuffleRags(A).min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link href="StyleSheet.css" rel="stylesheet" />
+
+    <script>
+
+        $(document).ready(function () {
+
+            var docHeight = $(window).height();
+            var footerHeight = $('#footer').height();
+            var footerTop = $('#footer').position().top + footerHeight;
+
+            if (footerTop < docHeight) {
+                $('#footer').css('margin-top', 10 + (docHeight - footerTop) + 'px');
+            }
+        });
+    </script>
+
 </head>
 <body>
-	<div data-role="page" data-theme="a">
-		<div data-role="header" data-position="inline">
+    <div data-role="page" data-theme="a">
+        <div data-role="header" data-position="inline">
+
             <img src="Images/Drawing.png" alt="ShuffleLogo" id="Logo" />
             <script type="text/javascript">
-                
-                 $("#Logo").each(function() "  "
-              </script>
-			<p> Is This A Header?</p>
-		</div>
-		<div data-role="content" data-themxe="a">
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
-		</div>
-	</div>
+
+                $("#Logo").each(function () {
+                    "  "
+                })
+            </script>
+            This is the header
+        </div>
+        <div class="wrapper" data-role="content" data-theme="a">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <div class="push"></div>
+        </div>
+
+        <div class="footer" data-role="footer" data-theme="a">
+            This is in the footer
+        </div>
+    </div>
 </body>
 </html>
