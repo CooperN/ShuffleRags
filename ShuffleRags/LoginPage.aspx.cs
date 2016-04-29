@@ -14,8 +14,12 @@ public partial class LoginPage : System.Web.UI.Page
 
     protected void LoginButton_Click(object sender, EventArgs e)
     {
+        
         //UserName to be used through out page... use it with database
         Session["UserName"] = UserNameTextBox.Text;
         //Server Transfer to AddPicture Page
+        Server.Transfer("AddPicture.aspx");
+        //somehow the server transfer isn't going through... figure out later
+
     }
 }
